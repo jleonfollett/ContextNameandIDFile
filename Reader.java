@@ -8,12 +8,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Reader {
-	private final String file = "C:\\ContextID\\log.txt";
+	Scanner scanner = new Scanner(System.in);
 	private FileReader fr;
 	private BufferedReader br;
 	private ArrayList<String> fileContents = new ArrayList<String>();
 	Reader() throws IOException{
-		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter file to be scanned");
+		final String file = scanner.nextLine();
 		System.out.println("Enter context");
 		final String context = scanner.nextLine();
 		System.out.println("Enter id");
