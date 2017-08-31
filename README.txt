@@ -1,6 +1,4 @@
-To run:
-
-Download ContextIDReader folder containing bat file and folder "john"
-Doubleclick the bat file
-If downloaded to the same folder as file to be read enter filename (ex. "log.txt") otherwise full path is needed 
-(ex. "C:\ContextID\log.txt")
+Download folder containing bat file and folder "john"
+Double click bat file to run
+If downloaded to same directory as file to be read use just filename (ex. "log.txt")
+Otherwise use full path (ex "C:\ContextID\log.txt")
