@@ -16,7 +16,10 @@ public class Reader {
 		System.out.println("Enter file to be scanned");
 		final String file = scanner.nextLine();
 		System.out.println("Enter context");
-		final String context = scanner.nextLine();
+		String context = scanner.nextLine();
+		if(context.startsWith("saas")){
+			context = context.substring(4,context.length());
+		}
 		System.out.println("Enter id");
 		final String id = scanner.nextLine();
 		OpenReader(file);
@@ -34,7 +37,7 @@ public class Reader {
 	private void ReadLinesToList(BufferedReader br, String context, String id) throws IOException{
 		String line;
 		while((line = br.readLine()) != null){
-			if(line.contains("Context:" + context) && line.contains("SiteID: " + id)){
+			if(line.contains("Context:saas" +  context) && line.contains("siteID:" + id)){
 			fileContents.add(line);
 			}
 		}
